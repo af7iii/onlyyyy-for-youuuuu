@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>Happy New Year 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Kalpurush', sans-serif; }
+
+body {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color:white;
+  text-align:center;
+  padding:20px;
+  overflow:hidden;
+}
+
+/* Floating Sparkles */
+.sparkle {
+  position:absolute;
+  width:6px;
+  height:6px;
+  background:white;
+  border-radius:50%;
+  opacity:0.8;
+  animation: sparkleAnim 5s linear infinite;
+}
+@keyframes sparkleAnim {
+  0% { transform: translateY(0) translateX(0) scale(0.5);}
+  50% { transform: translateY(-200px) translateX(50px) scale(1);}
+  100% { transform: translateY(-400px) translateX(-50px) scale(0.5);}
+}
+
+.card {
+  position:relative;
+  z-index:1;
+  max-width:720px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius:25px;
+  padding:35px 30px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.3);
+  text-align:left;
+  animation: fadeIn 1.2s ease;
+}
+
+h1 { font-size:34px; text-align:center; margin-bottom:10px; }
+.subtitle { font-size:14px; text-align:center; opacity:0.8; margin-bottom:20px; }
+
+button {
+  display:block;
+  margin:20px auto;
+  padding:12px 28px;
+  border:none;
+  border-radius:30px;
+  background:#ffffff;
+  color:#2c5364;
+  font-size:15px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover { transform:scale(1.05); background:#f1f1f1; }
+
+.letter {
+  display:none;
+  line-height:1.8;
+  white-space:pre-line;
+  margin-top:20px;
+  font-size:16px;
+}
+
+.signature { margin-top:25px; text-align:right; font-style:italic; opacity:0.85; }
+
+.typewriter {
+  overflow:hidden;
+  border-right: .15em solid rgba(255,255,255,0.7);
+  white-space:nowrap;
+  animation: typing 4s steps(60, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgba(255,255,255,0.7); }
+}
+
+@keyframes fadeIn { from {opacity:0; transform:scale(0.95);} to {opacity:1; transform:scale(1);} }
+</style>
+</head>
+
+<body>
+
+<!-- Sparkles -->
+<div class="sparkle" style="top:80%; left:10%; animation-delay:0s;"></div>
+<div class="sparkle" style="top:60%; left:30%; animation-delay:1s;"></div>
+<div class="sparkle" style="top:70%; left:50%; animation-delay:2s;"></div>
+<div class="sparkle" style="top:50%; left:70%; animation-delay:3s;"></div>
+<div class="sparkle" style="top:90%; left:90%; animation-delay:4s;"></div>
+
+<div class="card">
+  <h1>31st Night… 🎇</h1>
+  <div class="subtitle">Click to read something from my heart…</div>
+
+  <button onclick="toggleLetter()">Click to read 🤍</button>
+
+  <div class="letter" id="letter">
+<span class="typewriter">
+সবাই যেভাবে countdown করে, হাসে, আনন্দ করে,  
+আমি ভাবছি… আমার নতুন বছরটা কেমন শুরু হবে।  
+
+সত্যি বলতে কি, একটু empty লাগে যদি তুমি পাশে না থাকো।  
+তুমি হয়তো জানো না, কিন্তু তুমি আমার প্রতিদিনের ছোট ছোট খুশির reason,  
+আমার রাতের সব চুপচাপ হাসির কারণ।  
+
+এই বছরের শেষের মুহূর্তে, আমি শুধু এটা চাই —  
+তুমি আমার সঙ্গে থাকো।  
+
+নতুন বছরটা আমরা দুজন একসাথে শুরু করি,  
+হাসি, ছোট ছোট মুহূর্ত আর অনেক স্মৃতি বানাই।  
+
+আর হ্যাঁ… আমি চাই তুমি জানো, আমি সবসময় তোমার পাশে থাকতে চাই। 💖
+
+শেষে… Happy New Year!! 💖
+</span>
+
+<div class="signature">
+— From Your Afi ✨
+</div>
+  </div>
+</div>
+
+<script>
+function toggleLetter(){
+  const letter = document.getElementById("letter");
+  letter.style.display = letter.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
